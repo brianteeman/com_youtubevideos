@@ -5,6 +5,26 @@ All notable changes to the YouTube Videos Component for Joomla will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.35] - 2025-12-29
+
+### Fixed
+- **Video Import:** Fixed "Unknown column 'recipe_type' in 'field list'" error during video import.
+- **Import Robustness:** Enhanced `ImportService` to automatically skip XML fields that do not exist as columns in the database table.
+- **Database Schema:** Added missing `recipe_type` and `recipe_data` columns to the base `install.mysql.sql` schema to ensure consistency for new installations.
+
+## [1.0.34] - 2025-12-23
+
+### Fixed
+- **Module Title Parameter:** Renamed `show_title` parameter to `show_video_title` in both `mod_youtube_single` and `mod_youtubevideos` to avoid collision with Joomla's core module title parameter.
+- **Parameter Casting:** Explicitly cast boolean-like parameters to integer in module templates for more robust conditional rendering.
+
+## [1.0.33] - 2025-12-23
+
+### Fixed
+- **Multi-instance Support:** Fixed conflict when multiple instances of the YouTube Videos module are present on the same page.
+- **Unique IDs:** Implemented unique IDs for video modals and players using module instance IDs.
+- **JavaScript Refactoring:** Updated `youtube-player.js` to correctly manage multiple player instances and modals.
+
 ## [1.0.32] - 2025-12-07
 
 ### Fixed
