@@ -5,6 +5,24 @@ All notable changes to the YouTube Videos Component for Joomla will be documente
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.40] - 2026-01-01
+
+### Fixed
+- **Structured Data Validation:** Fixed a "mutually exclusive" error in the `ListItem` schema by moving the `url` property inside the `item` (VideoObject) instead of having it on the `ListItem` itself.
+
+## [1.0.39] - 2026-01-01
+
+### Fixed
+- **Structured Data Fallback:** Switched from null coalescing (`??`) to Elvis operator (`?:`) for thumbnail fallback logic to ensure empty strings in the database correctly trigger the YouTube fallback.
+- **Video View Bug Fix:** Fixed a logic error in the single video view where it was missing a guard clause and using an incorrect property for interaction statistics.
+
+## [1.0.38] - 2026-01-01
+
+### Fixed
+- **JavaScript Versioning:** Explicitly included minified version of the YouTube player script to ensure updates are applied on production sites that load `.min.js` files by default.
+
+## [1.0.37] - 2026-01-01
+
 ## [1.0.35] - 2025-12-29
 
 ### Fixed
